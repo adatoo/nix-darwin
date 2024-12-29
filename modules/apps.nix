@@ -36,8 +36,23 @@
         };
 
         masApps = {
-        # TODO Feel free to add your favorite apps here.
+            # Safari Browser Extensions
+            "Raindrop.io" = 1549370672;
+            "AdBlock Pro" = 1018301773;
+            "Page Screenshot for Safari" = 1472715727;
+            # Mac Developer Tools
             Xcode = 497799835;
+            Playgrounds = 1496833156;
+            TestFlight = 899247664;
+            # Apple Productivity
+            Pages = 409201541;
+            Numbers = 409203825;
+            Keynote = 409183694;
+            # 3rd Party Tools
+            MindNode = 1289197285;
+            # Acorn = 1547371478; No Longer Available on Mac App Store
+            Craft = 1487937127;
+            DaisyDisk = 411643860;
         };
 
         taps = [
@@ -63,6 +78,7 @@
             "go"
             "go-task"
             # python
+            "pyenv"
             "uv"
             # data processing
             "jq"

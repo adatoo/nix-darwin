@@ -19,10 +19,85 @@
         '';
 
         defaults = {
+            SoftwareUpdate.AutomaticallyInstallMacOSUpdates = true;  # automatically install macOS updates
             menuExtraClock.Show24Hour = true;  # show 24 hour clock
 
-            # other macOS's defaults configuration.
-            # ......
+            # customize dock
+            dock = {
+                autohide = false;
+                show-recents = false;  # disable recent apps
+                wvous-tr-corner = 10;  # top right corner - put display to sleep
+                persistent-apps = [
+                    "/System/Applications/Launchpad.app"
+                    "/System/Cryptexes/App/System/Applications/Safari.app"
+                    "/Applications/Google Chrome.app"
+                    "/Applications/Raindrop.io.app"
+                    "/System/Applications/Preview.app"
+                    "/System/Applications/Mail.app"
+                    "/System/Applications/Calendar.app"
+                    "/System/Applications/Messages.app"
+                    "/Applications/Craft.app"
+                    "/System/Applications/Notes.app"
+                    "/Applications/draw.io.app"
+                    "/System/Applications/Reminders.app"
+                    "/Applications/Mindnode.app"
+                    "/Applications/Visual Studio Code.app"
+                    "/Applications/Fork.app"
+                    "/Applications/Postgres.app"
+                    "/System/Applications/Utilities/Terminal.app"
+                    "/Applications/Xcode.app"
+                    "/Applications/Playgrounds.app"
+                    "/Applications/SF Symbols.app"
+                ];
+            };
+
+            # customize finder
+            finder = {
+                AppleShowAllExtensions = true;  # show all file extensions
+                AppleShowAllFiles = true;  # show hidden files
+                NewWindowTarget = "Home";  # set default folder to home
+                FXPreferredViewStyle = "clmv";  # set default view style to column view
+                FXEnableExtensionChangeWarning = false;  # disable warning when changing file extension
+                _FXSortFoldersFirst = true;  # sort folders first
+                _FXSortFoldersFirstOnDesktop = true;  # sort folders first on desktop
+                _FXShowPosixPathInTitle = false;  # show full path in finder title
+                ShowPathbar = true;  # show path bar
+                ShowStatusBar = true;  # show status bar
+                QuitMenuItem = false;  # enable quit menu item
+            };
+    
+            # customize trackpad
+            trackpad = {
+                Clicking = true;  # enable tap to click
+                TrackpadRightClick = true;  # enable two finger right click
+                TrackpadThreeFingerDrag = true;  # enable three finger drag
+            };
+
+            CustomUserPreferences = {
+                NSGlobalDomain = {
+                # Add a context menu item for showing the Web Inspector in web views
+                WebKitDeveloperExtras = true;
+                };
+                "com.apple.finder" = {
+                ShowExternalHardDrivesOnDesktop = true;
+                ShowHardDrivesOnDesktop = false;
+                ShowMountedServersOnDesktop = true;
+                ShowRemovableMediaOnDesktop = true;
+                _FXSortFoldersFirst = true;
+                # When performing a search, search the current folder by default
+                FXDefaultSearchScope = "SCcf";
+                };
+                "com.apple.desktopservices" = {
+                # Avoid creating .DS_Store files on network or USB volumes
+                DSDontWriteNetworkStores = true;
+                DSDontWriteUSBStores = true;
+                };
+            };
+
+            loginwindow = {
+                GuestEnabled = false;  # disable guest user
+                SHOWFULLNAME = false;  # show full name in login window
+            };
         };
     };
 
@@ -32,4 +107,7 @@
     # Create /etc/zshrc that loads the nix-darwin environment.
     # this is required if you want to use darwin's default shell - zsh
     programs.zsh.enable = true;
+
+    # Set your time zone.
+    time.timeZone = "Europe/London";
 }

@@ -95,6 +95,7 @@
             "google-chrome"
             "hiddenbar"
             "iina"
+            "kaleidoscope"
             "orbstack"
             "postgres-unofficial"
             "postico"

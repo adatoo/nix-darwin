@@ -1,5 +1,5 @@
 
-{ hostname, username, pkgs, ... }:
+{ hostname, user_id, user_name, user_fullname, pkgs, ... }:
 
 #############################################################
 #
@@ -13,14 +13,14 @@
     system.defaults.smb.NetBIOSName = hostname;
 
     users = { 
-        knownUsers = [ username ];
-        users."${username}" = {
-            home = "/Users/${username}";
-            description = username;
-            uid = 501;
+        knownUsers = [ user_name ];
+        users."${user_name}" = {
+            home = "/Users/${user_name}";
+            description = user_fullname;
+            uid = user_id;
             shell = pkgs.fish;
         };
     };
 
-    nix.settings.trusted-users = [ username ];
+    nix.settings.trusted-users = [ user_name ];
 }

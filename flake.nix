@@ -27,14 +27,16 @@
         ...
     }: let
     # TODO replace with your own username, system and hostname
-    username = "adatoo";
+    user_id = 501;
+    user_name = "adatoo";
+    user_fullname = "Arif Datoo";
     system = "aarch64-darwin"; # aarch64-darwin or x86_64-darwin
     hostname = "arifs-macbook";
 
     specialArgs =
         inputs
         // {
-            inherit username hostname;
+            inherit hostname user_id user_name user_fullname;
         };
     in {
         darwinConfigurations."${hostname}" = darwin.lib.darwinSystem {

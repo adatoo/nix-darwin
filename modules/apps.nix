@@ -18,7 +18,6 @@
     #
     # Related Discussion: https://discourse.nixos.org/t/darwin-again/29331
     environment.systemPackages = with pkgs; [
-        git
     ];
 
     # TODO To make this work, homebrew need to be installed manually, see https://brew.sh
@@ -62,6 +61,9 @@
         # `brew install`
         # TODO Feel free to add your favorite apps here.
         brews = [
+            # shell tooling
+            "fish"
+            "direnv"
             # cloud and devops cli tools
             "awscli"
             "tfenv"
@@ -72,8 +74,6 @@
             "deno"
             "node"
             "yarn"
-            # shell tooling
-            "direnv"
             # golang
             "go"
             "go-task"

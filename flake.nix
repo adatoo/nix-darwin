@@ -31,7 +31,7 @@
     user_name = "adatoo";
     user_fullname = "Arif Datoo";
     system = "aarch64-darwin"; # aarch64-darwin or x86_64-darwin
-    hostname = "arifs-macbook";
+    hostname = "arifs-macmini";
 
     specialArgs =
         inputs

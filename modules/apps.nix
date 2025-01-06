@@ -66,6 +66,7 @@
             "direnv"
             # cloud and devops cli tools
             "awscli"
+            "cloud-nuke"
             "tfenv"
             "tgenv"
             # database tools
@@ -79,6 +80,7 @@
             "go-task"
             # python
             "pyenv"
+            "pyenv-virtualenv"
             "uv"
             # data processing
             "jq"
@@ -91,6 +93,7 @@
         casks = [
             "drawio"
             "dropdmg"
+            "dropbox"
             "fork"
             "google-chrome"
             "hiddenbar"

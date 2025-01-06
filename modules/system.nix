@@ -55,7 +55,7 @@
             # customize finder
             finder = {
                 AppleShowAllExtensions = true;  # show all file extensions
-                AppleShowAllFiles = true;  # show hidden files
+                AppleShowAllFiles = false;  # show hidden files
                 NewWindowTarget = "Home";  # set default folder to home
                 FXPreferredViewStyle = "clmv";  # set default view style to column view
                 FXEnableExtensionChangeWarning = false;  # disable warning when changing file extension

@@ -107,8 +107,8 @@
             "swiftformat-for-xcode"
             "viscosity"
             "visual-studio-code"
+            "whatsapp"
             # NOT USED
-            # "whatsapp"
             # "omnigraffle"
             # "postman"
         ];

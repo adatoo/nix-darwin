@@ -39,7 +39,7 @@ This repository contains the config for setup for my preferred Development envir
 1. **Run the Config**
 
    ```
-   nix run nix-darwin -- switch --flake github:adatoo/nix-darwin/setup-basic-config --no-write-lock-file
+   nix run nix-darwin --extra-experimental-features nix-command --extra-experimental-features flakes -- switch --flake github:adatoo/nix-darwin/setup-basic-config --no-write-lock-file
    ```
 
 ## Uninstalling

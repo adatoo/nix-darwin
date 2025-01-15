@@ -35,7 +35,7 @@
                     "/System/Applications/Mail.app"
                     "/System/Applications/Calendar.app"
                     "/System/Applications/Messages.app"
-                    "/System/Applications/WhatsApp.app"
+                    "/Applications/WhatsApp.app"
                     "/System/Applications/Notes.app"
                     "/System/Applications/Reminders.app"
                     "/Applications/Mindnode.app"

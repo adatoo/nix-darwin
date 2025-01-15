@@ -91,6 +91,7 @@
         # `brew install --cask`
         # TODO Feel free to add your favorite apps here.
         casks = [
+            "choosy"
             "drawio"
             "dropdmg"
             "dropbox"

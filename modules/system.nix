@@ -32,7 +32,6 @@
                     "/System/Cryptexes/App/System/Applications/Safari.app"
                     "/Applications/Google Chrome.app"
                     "/Applications/Raindrop.io.app"
-                    "/System/Applications/Preview.app"
                     "/System/Applications/Mail.app"
                     "/System/Applications/Calendar.app"
                     "/System/Applications/Messages.app"
